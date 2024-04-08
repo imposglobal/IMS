@@ -131,6 +131,7 @@
                   
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=monitor&amp;condition=assigned">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -146,10 +147,12 @@
                           </div>
                         </div>
                       </div>
+                     </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=headphones&amp;condition=assigned">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -165,10 +168,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=mouse&amp;condition=assigned">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -184,10 +189,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=keyboard&amp;condition=assigned">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -203,10 +210,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=ups&amp;condition=assigned">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -222,10 +231,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=cpu&amp;condition=assigned">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -241,10 +252,12 @@
                           </div>
                         </div>
                       </div>
+                       </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=Laptop&amp;condition=assigned">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -260,12 +273,14 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <h5 class=" mt-5 mb-1" style="line-height: 22PX;">Ready to Use Products</h5>
                     <div class="row gy-3">
                      <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=monitor&amp;condition=rtu">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -281,10 +296,12 @@
                           </div>
                         </div>
                       </div>
+                    </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=headphones&amp;condition=rtu">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -300,10 +317,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=mouse&amp;condition=rtu">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -319,10 +338,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=keyboard&amp;condition=rtu">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -338,10 +359,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=ups&amp;condition=rtu">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -357,10 +380,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=cpu&amp;condition=rtu">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -376,10 +401,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=laptop&amp;condition=rtu">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -395,6 +422,7 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     </div>
@@ -402,6 +430,7 @@
                     <div class="row gy-3">
                      <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=monitor&amp;condition=dead">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -417,10 +446,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=headphones&amp;condition=dead">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -436,10 +467,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=mouse&amp;condition=dead">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -455,10 +488,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=keyboard&amp;condition=dead">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -474,10 +509,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=ups&amp;condition=dead">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -493,10 +530,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=cpu&amp;condition=dead">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -512,10 +551,12 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     <!-- Total Profit Weekly Project -->
                     <div class="col-sm-3">
+                    <a href="view_products.php?category=laptop&amp;condition=dead">
                       <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                           <div class="avatar">
@@ -531,6 +572,7 @@
                           </div>
                         </div>
                       </div>
+                      </a>
                     </div>
                     <!--/ Total Profit Weekly Project -->
                     </div>
@@ -542,7 +584,9 @@
 <h5 class=" mt-5 mb-1" style="line-height: 22PX;">Need to Repair Products</h5>
   <div class="row gy-3">
    <!-- Total Profit Weekly Project -->
+   
   <div class="col-sm-3">
+    <a href="view_products.php?category=monitor&amp;condition=repair">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="avatar">
@@ -558,10 +602,13 @@
         </div>
       </div>
     </div>
+    </a>
+   
   </div>
   <!--/ Total Profit Weekly Project -->
   <!-- Total Profit Weekly Project -->
   <div class="col-sm-3">
+  <a href="view_products.php?category=headphones&amp;condition=repair">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="avatar">
@@ -577,10 +624,12 @@
         </div>
       </div>
     </div>
+    </a>
   </div>
   <!--/ Total Profit Weekly Project -->
   <!-- Total Profit Weekly Project -->
   <div class="col-sm-3">
+  <a href="view_products.php?category=mouse&amp;condition=repair">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="avatar">
@@ -596,10 +645,12 @@
         </div>
       </div>
     </div>
+    </a>
   </div>
   <!--/ Total Profit Weekly Project -->
   <!-- Total Profit Weekly Project -->
   <div class="col-sm-3">
+  <a href="view_products.php?category=keyboard&amp;condition=repair">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="avatar">
@@ -615,10 +666,12 @@
         </div>
       </div>
     </div>
+    </a>
   </div>
   <!--/ Total Profit Weekly Project -->
   <!-- Total Profit Weekly Project -->
   <div class="col-sm-3">
+  <a href="view_products.php?category=ups&amp;condition=repair">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="avatar">
@@ -634,10 +687,12 @@
         </div>
       </div>
     </div>
+    </a>
   </div>
   <!--/ Total Profit Weekly Project -->
   <!-- Total Profit Weekly Project -->
   <div class="col-sm-3">
+  <a href="view_products.php?category=cpu&amp;condition=repair">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="avatar">
@@ -653,10 +708,12 @@
         </div>
       </div>
     </div>
+    </a>
   </div>
   <!--/ Total Profit Weekly Project -->
   <!-- Total Profit Weekly Project -->
   <div class="col-sm-3">
+  <a href="view_products.php?category=laptop&amp;condition=repair">
     <div class="card h-100">
       <div class="card-header d-flex align-items-center justify-content-between">
         <div class="avatar">
@@ -672,6 +729,7 @@
         </div>
       </div>
     </div>
+    </a>
   </div>
   <!--/ Total Profit Weekly Project -->
   </div>

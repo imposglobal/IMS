@@ -85,8 +85,7 @@
             
            
             <!-- Admin -->
-            <li class="menu-header small text-uppercase mt-2"><span class="menu-header-text">Admin</span></li>
-        
+            <li class="menu-header small text-uppercase mt-2"><span class="menu-header-text">Admin</span></li>       
             <li class="menu-item">
               <a
                 href=""
@@ -95,6 +94,22 @@
                 <div data-i18n="Documentation">Add Admin</div>
               </a>
             </li>
+
+           <!-- View  Assigned Products -->
+
+           <li class="menu-header small text-uppercase mt-2"><span class="menu-header-text">Admin</span></li>       
+            <li class="menu-item">
+              <a
+                href="view_assigned_products.php"
+                class="menu-link">
+                <i class="menu-icon tf-icons mdi mdi-file-document-multiple-outline"></i>
+                <div data-i18n="Documentation">Export</div>
+              </a>
+            </li>
+
+
+
+
           </ul>
         </aside>
         <!-- / Menu -->

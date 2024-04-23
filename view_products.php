@@ -53,9 +53,9 @@ if(isset($_GET['category']) && isset($_GET['condition']))
                 <th class="text-white">Product Name</th>
                 <th class="text-white">Conditon</th>
                 <th class="text-white">serial_no</th>
-                <?php if($condition=='repair'){ ?>
+                <?php if ($condition == 'repair' || $condition == 'dead') { ?>
                 <th class="text-white">Action</th>
-                <?php }?>
+               <?php } ?>
             </tr>
         </thead>
         <tbody>
@@ -77,17 +77,12 @@ if(isset($_GET['category']) && isset($_GET['condition']))
         <td><?php echo $row['product_name']; ?></td>     
         <td><?php echo $row['conditionp']; ?></td>
         <td><?php echo $row['serial_no']; ?></td>
-        <?php if($condition=='repair')
-        { ?>
-       
-
+        <?php if ($condition == 'repair' || $condition == 'dead') { ?>
         <td>
-        
-          <input type="hidden" name="pid" value="<?php echo $row['pid']; ?>">
-          <input type="submit" name="update" value="RTU"  class="text-white impos-bg-1 form-control">
+        <input type="hidden" name="pid" value="<?php echo $row['pid']; ?>">
+        <input type="submit" name="update" value="RTU" class="text-white impos-bg-1 form-control">
         </td>
-        <?php 
-        }?>
+        <?php } ?>
     </tr>
 <?php 
     }

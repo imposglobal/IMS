@@ -82,7 +82,7 @@ if(isset($_GET['category']) && isset($_GET['condition']))
         <?php if ($condition == 'repair' || $condition == 'dead') { ?>
         <td> 
             <form method="POST">
-            <input type="text" name="pid" value="<?php echo $row['pid']; ?>">
+            <input type="hidden" name="pid" value="<?php echo $row['pid']; ?>">
             <input type="submit" name="update" value="RTU" class="text-white impos-bg-1 form-control">
            </form>                                             
         </td>       

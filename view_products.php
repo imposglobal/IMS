@@ -80,9 +80,11 @@ if(isset($_GET['category']) && isset($_GET['condition']))
         <td><?php echo $row['conditionp']; ?></td>
         <td><?php echo $row['serial_no']; ?></td>
         <?php if ($condition == 'repair' || $condition == 'dead') { ?>
-        <td>
-        <input type="hidden" name="pid" value="<?php echo $row['pid']; ?>">
-        <input type="submit" name="update" value="RTU" class="text-white impos-bg-1 form-control">        
+        <td> 
+            <form method="POST">
+            <input type="text" name="pid" value="<?php echo $row['pid']; ?>">
+            <input type="submit" name="update" value="RTU" class="text-white impos-bg-1 form-control">
+           </form>                                             
         </td>       
         <?php } ?>
         <td><i onclick="confirmDelete('<?php echo $row['pid'];?>')" style="color:red;cursor:pointer" class="mdi mdi-delete-sweep-outline mdi-24px"></i></td>
@@ -123,13 +125,17 @@ if(isset($_POST["update"]))
 
   if($update == true)
   {
-    echo '<script>alert("Status Update")</script>';
+    echo '<script>alert("Status Updated");</script>';
   }
 }
 ?>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 function confirmDelete(pid) {
   Swal.fire({
@@ -144,7 +150,7 @@ function confirmDelete(pid) {
     if (result.isConfirmed) 
     {
       $.ajax({
-        url: 'https://ims.imposglobal.com/api/delete_product.php',
+        url: 'https://ims.imposglobal.com/api/delete_products.php',
         type: 'POST',
         data: { delete: true, pid: pid },
         success: function(response) {

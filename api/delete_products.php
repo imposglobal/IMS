@@ -8,9 +8,10 @@ if (isset($_POST["delete"]))
     $qry = "DELETE FROM inventory WHERE pid = '$pid'";
     
     // Assuming $db is your database connection
-    $update = $db->query($qry);
+    $delete = $db->query($qry);
   
-    if ($update === true) {
+    if ($delete === true) 
+    {
       echo "Product deleted successfully.";
     } else {
       echo "Error deleting product: " . $db->error;

@@ -54,8 +54,10 @@ if(isset($_GET['category']) && isset($_GET['condition']))
                 <th class="text-white">Conditon</th>
                 <th class="text-white">serial_no</th>
                 <?php if ($condition == 'repair' || $condition == 'dead') { ?>
-                <th class="text-white">Action</th>
+                <th class="text-white">Update</th>
+                
                <?php } ?>
+               <th class="text-white">Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -80,9 +82,10 @@ if(isset($_GET['category']) && isset($_GET['condition']))
         <?php if ($condition == 'repair' || $condition == 'dead') { ?>
         <td>
         <input type="hidden" name="pid" value="<?php echo $row['pid']; ?>">
-        <input type="submit" name="update" value="RTU" class="text-white impos-bg-1 form-control">
-        </td>
+        <input type="submit" name="update" value="RTU" class="text-white impos-bg-1 form-control">        
+        </td>       
         <?php } ?>
+        <td><i onclick="confirmDelete('<?php echo $row['pid'];?>')" style="color:red;cursor:pointer" class="mdi mdi-delete-sweep-outline mdi-24px"></i></td>
     </tr>
 <?php 
     }
@@ -124,3 +127,45 @@ if(isset($_POST["update"]))
   }
 }
 ?>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+function confirmDelete(pid) {
+  Swal.fire({
+    title: 'Are you sure?',
+    text: "Do you want to delete this product?",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) 
+    {
+      $.ajax({
+        url: 'https://ims.imposglobal.com/api/delete_product.php',
+        type: 'POST',
+        data: { delete: true, pid: pid },
+        success: function(response) {
+          Swal.fire(
+            'Deleted!',
+            response,
+            'success'
+          ).then(() => {
+            location.reload();
+          });
+        },
+        error: function(xhr, status, error) {
+          Swal.fire(
+            'Error!',
+            'An error occurred: ' + xhr.responseText,
+            'error'
+          );
+        }
+      });
+    }
+  });
+}
+</script>
+

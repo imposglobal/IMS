@@ -129,6 +129,7 @@ if($status == "success"){
                           <option value="Mouse">Mouse</option>
                           <option value="CPU">CPU</option>
                           <option value="UPS">UPS</option>
+                          <option value="Laptop-Charger">Laptop Charger</option>
                         </select>
                         <label for="exampleFormControlSelect1">Select Category</label>
                       </div>

@@ -1,4 +1,6 @@
 <?php
+// ready to use products count
+
 
 function getTotalMonitorCount() {
     global $db;
@@ -90,7 +92,8 @@ function getTotalUPSCount() {
     return 0; // Return 0 if no rows are found
 }
 
-function getTotalLaptopCount() {
+function getTotalLaptopCount() 
+{
     global $db;
     $sql = "SELECT count(*) as tot_mont FROM inventory WHERE conditionp = 'rtu' and category = 'Laptop'";
     $result = $db->query($sql);
@@ -105,7 +108,29 @@ function getTotalLaptopCount() {
     return 0; // Return 0 if no rows are found
 }
 
-//for daead counts
+
+
+// get rtu charger count 
+
+function getTotalLaptopChargerCount() 
+{
+    global $db;
+    $sql = "SELECT count(*) as tot_char FROM inventory WHERE conditionp = 'rtu' and category = 'Laptop-Charger'";
+    $result = $db->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Output data of each row
+        while($row = $result->fetch_assoc()) { 
+            return $row['tot_char'];
+        }
+    }
+
+    return 0; // Return 0 if no rows are found
+}
+
+
+
+//for dead counts
 
 function getDeadMonitorCount() {
     global $db;
@@ -199,6 +224,22 @@ function getDeadLaptopCount() {
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) { 
             return $row['tot_mont'];
+        }
+    }
+
+    return 0;
+}
+
+// get dead charger count
+
+function getDeadLaptopChargerCount() {
+    global $db;
+    $sql = "SELECT count(*) as tot_char FROM inventory WHERE conditionp = 'dead' and category = 'Laptop-Charger'";
+    $result = $db->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) { 
+            return $row['tot_char'];
         }
     }
 
@@ -299,6 +340,25 @@ function getAssignedLaptopCount() {
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) { 
             return $row['tot_mont'];
+        }
+    }
+
+    return 0;
+}
+
+
+// get assigned charger count
+
+function getAssignedLaptopChargerCount() 
+{
+    global $db;
+    $sql = "SELECT count(*) as tot_char FROM inventory WHERE conditionp = 'assigned' and category = 'Laptop-Charger'";
+    $result = $db->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) 
+        { 
+            return $row['tot_char'];
         }
     }
 
@@ -407,7 +467,26 @@ function getrepairLaptopCount() {
 }
 
 
+// get repair charger count
 
+function getrepairLaptopChargerCount() {
+    global $db;
+    $sql = "SELECT count(*) as tot_char FROM inventory WHERE conditionp = 'repair' and category = 'Laptop-Charger'";
+    $result = $db->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) { 
+            return $row['tot_char'];
+        }
+    }
+
+    return 0;
+}
+
+
+
+
+// RTU
 $totalMonitorCount = getTotalMonitorCount();
 $totalKeyboardCount = getTotalKeyboardCount();
 $totalMouseCount = getTotalMouseCount();
@@ -415,7 +494,10 @@ $totalCPUCount = getTotalCPUCount();
 $totalHeadphoneCount = getTotalHeadphoneCount();
 $totalUPSCount = getTotalUPSCount();
 $totalLaptopCount = getTotalLaptopCount();
+$totalLaptopChargerCount = getTotalLaptopChargerCount();
 
+
+// Dead
 $deadMonitorCount = getDeadMonitorCount();
 $deadKeyboardCount = getDeadKeyboardCount();
 $deadMouseCount = getDeadMouseCount();
@@ -423,7 +505,9 @@ $deadCPUCount = getDeadCPUCount();
 $deadHeadphoneCount = getDeadHeadphoneCount();
 $deadUPSCount = getDeadUPSCount();
 $deadLaptopCount = getDeadLaptopCount();
+$deadLaptopChargerCount = getDeadLaptopChargerCount();
 
+// Repair
 $repairMonitorCount = getrepairMonitorCount();
 $repairKeyboardCount = getrepairKeyboardCount();
 $repairMouseCount = getrepairMouseCount();
@@ -431,7 +515,9 @@ $repairCPUCount = getrepairCPUCount();
 $repairHeadphoneCount = getrepairHeadphoneCount();
 $repairUPSCount = getrepairUPSCount();
 $repairLaptopCount = getrepairLaptopCount();
+$repairLaptopChargerCount =  getrepairLaptopChargerCount();
 
+// Assigned
 $assignedMonitorCount = getAssignedMonitorCount();
 $assignedKeyboardCount = getAssignedKeyboardCount();
 $assignedMouseCount = getAssignedMouseCount();
@@ -439,4 +525,6 @@ $assignedCPUCount = getAssignedCPUCount();
 $assignedHeadphoneCount = getAssignedHeadphoneCount();
 $assignedUPSCount = getAssignedUPSCount();
 $assignedLaptopCount = getAssignedLaptopCount();
+$assignedLaptopChargerCount = getAssignedLaptopChargerCount();
+
 ?>

@@ -275,6 +275,30 @@
                       </div>
                       </a>
                     </div>
+
+                    <!-- charger -->
+
+                    <div class="col-sm-3">
+                    <a href="view_products.php?category=laptop-charger&amp;condition=assigned">
+                      <div class="card h-100">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                          <div class="avatar">
+                            <div class="avatar-initial impos-bg-1 rounded-circle shadow">
+                              <i class="mdi mdi-laptop mdi-24px"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body mt-mg-1">
+                          <h6 class="mb-2" style="line-height: 22PX;">Assigned Chargers</h6>
+                          <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
+                            <h4 class="mb-0 me-2"><?php echo $assignedLaptopChargerCount ?></h4><small>Units</small>        
+                          </div>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+
+
                     <!--/ Total Profit Weekly Project -->
                     <h5 class=" mt-5 mb-1" style="line-height: 22PX;">Ready to Use Products</h5>
                     <div class="row gy-3">
@@ -419,6 +443,27 @@
                           <h6 class="mb-2" style="line-height: 22PX;">RTU Laptops</h6>
                           <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
                             <h4 class="mb-0 me-2"><?php echo $totalLaptopCount; ?></h4><small>Units</small>
+                          </div>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+
+                     <!-- Total Profit Weekly Project -->
+                     <div class="col-sm-3">
+                    <a href="view_products.php?category=laptop-charger&amp;condition=rtu">
+                      <div class="card h-100">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                          <div class="avatar">
+                            <div class="avatar-initial impos-bg-1 rounded-circle shadow">
+                              <i class="mdi mdi-laptop mdi-24px"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body mt-mg-1">
+                          <h6 class="mb-2" style="line-height: 22PX;">RTU Chargers</h6>
+                          <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
+                            <h4 class="mb-0 me-2"><?php echo $totalLaptopChargerCount;?></h4><small>Units</small>
                           </div>
                         </div>
                       </div>
@@ -569,6 +614,27 @@
                           <h6 class="mb-2" style="line-height: 22PX;">Dead Laptops</h6>
                           <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
                             <h4 class="mb-0 me-2"><?php echo $deadLaptopCount; ?></h4><small>Units</small>
+                          </div>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+
+                     <!-- Total Profit Weekly Project -->
+                     <div class="col-sm-3">
+                    <a href="view_products.php?category=laptop-charger&amp;condition=dead">
+                      <div class="card h-100">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                          <div class="avatar">
+                            <div class="avatar-initial impos-bg-1 rounded-circle shadow">
+                              <i class="mdi mdi-laptop mdi-24px"></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card-body mt-mg-1">
+                          <h6 class="mb-2" style="line-height: 22PX;">Dead Charger</h6>
+                          <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
+                            <h4 class="mb-0 me-2"><?php echo $deadLaptopChargerCount; ?></h4><small>Units</small>
                           </div>
                         </div>
                       </div>
@@ -726,6 +792,26 @@
         <h6 class="mb-2" style="line-height: 22PX;">Repair Laptops</h6>
         <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
           <h4 class="mb-0 me-2"><?php echo $repairLaptopCount; ?></h4><small>Units</small>
+        </div>
+      </div>
+    </div>
+    </a>
+  </div>
+  <!-- Total Profit Weekly Project -->
+  <div class="col-sm-3">
+  <a href="view_products.php?category=laptop-charger&amp;condition=repair">
+    <div class="card h-100">
+      <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="avatar">
+          <div class="avatar-initial impos-bg-1 rounded-circle shadow">
+            <i class="mdi mdi-laptop mdi-24px"></i>
+          </div>
+        </div>
+      </div>
+      <div class="card-body mt-mg-1">
+        <h6 class="mb-2" style="line-height: 22PX;">Repair Chargers</h6>
+        <div class="d-flex flex-wrap align-items-center mb-2 pb-1">
+          <h4 class="mb-0 me-2"><?php echo $repairLaptopChargerCount; ?></h4><small>Units</small>
         </div>
       </div>
     </div>

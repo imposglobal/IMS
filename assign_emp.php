@@ -233,13 +233,38 @@
                     <i id="laptop_s" class="mdi mdi-check-decagram mt-2" style="color:green;font-size:20px"></i>
                     <button onclick="validate('Laptop')" type="button" name="" id="laptopb" class="mt-2 impos-bg-1 text-white px-3"><i id="falaptop_p" class=" py-2 fa fa-plus" ></i> <i id="falaptop_s" class="fa fa-spinner fa-spin faicon" ></i></button>
                     </div>
-                    
-                    
+
+
+                    <!-- charger  -->
+                      
+                    <div class="col-lg-3">
+                    <div class="form-floating form-floating-outline">
+                        <select  name="laptop_charger" class="form-select" id="laptop_charger" aria-label="Default select example">
+                          <option selected="">Select Laptop Charger</option>
+                          <?php 
+                          $sql = "SELECT * FROM inventory WHERE category = 'Laptop-Charger' AND conditionp ='rtu'";
+                          $result = $db->query($sql);
+                          if ($result->num_rows > 0) {
+                              // Output data of each row
+                              while($row = $result->fetch_assoc()) {  ?>
+                                 <option value="<?php echo $row['pid'] ?>"><?php echo $row['serial_no']." - ".$row['product_name'];  ?></option>
+                             <?php }
+                          } 
+                          ?>
+                        </select>
+                        <label for="laptop_charger">Select Charger</label>
+                      </div>
+                    </div>
+                    <div class="col-lg-1">
+                    <i id="charger_s" class="mdi mdi-check-decagram mt-2" style="color:green;font-size:20px"></i>
+                    <button onclick="validate('Laptop-Charger')" type="button" name="" id="chargerb" class="mt-2 impos-bg-1 text-white px-3"><i id="falaptopchar_p" class=" py-2 fa fa-plus" ></i> <i id="falaptopchar_s" class="fa fa-spinner fa-spin faicon" ></i></button>
+                    </div>
+                      
+
+                    <!-- charger -->
                   </div>
                 </div>
               </form>
-           
-
           </div>
 
 
@@ -306,6 +331,18 @@
                 assignLaptop();
             }
             break;
+
+        case "Laptop-Charger":
+            let laptop_charger = $('#laptop_charger').val();
+            if (laptop_charger == "Select Laptop Charger") 
+            {
+                alert("Please select item.");
+            } else {
+              assignLaptopCharger();
+            }
+            break;    
+
+
         default:
             // Default case if prod does not match any of the specified cases.
             break;
@@ -339,7 +376,8 @@
 
   }
   //for monitor
-  function assignMonitor(){
+  function assignMonitor()
+  {
     let monitor = $('#monitor').val();
     let empid = $('#empid').val();
     $('#famon_s').addClass('faicons');
@@ -362,8 +400,7 @@
         console.error('Error:', error);
     }
 });
-
-  }
+}
 
   //for cpu
   function assignCpu(){
@@ -388,11 +425,11 @@
         console.error('Error:', error);
     }
 });
-
   }
 
   //for Mouse
-  function assignMouse(){
+  function assignMouse()
+  {
     let mous = $('#mouse').val();
     let empid = $('#empid').val();
     $('#famous_s').addClass('faicons');
@@ -414,8 +451,7 @@
         console.error('Error:', error);
     }
 });
-
-  }
+}
 
   //for Headphone
   function assignHeadphone(){
@@ -472,7 +508,8 @@
   }
 
   //for Laptop
-  function assignLaptop(){
+  function assignLaptop()
+  {
     let laptop = $('#laptop').val();
     let empid = $('#empid').val();
     $('#falaptop_s').addClass('faicons');
@@ -495,8 +532,41 @@
         console.error('Error:', error);
     }
 });
+}
 
-  }
+
+// for laptop charger
+
+  function assignLaptopCharger()
+  {
+    let laptop_charger = $('#laptop_charger').val();
+    let empid = $('#empid').val();
+    $('#falaptopchar_s').addClass('faicons');
+    $('#falaptopchar_p').hide();
+    console.log(laptop_charger);
+    $.ajax({
+    url: 'https://ims.imposglobal.com/api/assignemp.php',
+    type: 'POST',
+    data: {
+        empid: empid,
+        refcode: laptop_charger,
+        assign:'assign'
+    },
+    success: function(data) 
+    {
+      $('#chargerb').hide();
+      $('#charger_s').show();
+        console.log('Post created:', data);
+    },
+    error: function(error) {
+        console.error('Error:', error);
+    }
+});
+}
+
+
+
+
 </script>
             <!-- Footer -->
             <?php require('footer.php'); ?>

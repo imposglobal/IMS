@@ -14,7 +14,7 @@ header("Expires: 0");
 $output = fopen("php://output", "w");
 
 // Write headers to CSV
-fputcsv($output, array('No', 'Employee ID', 'Employee Name', 'Laptop', 'Mouse', 'Headphone', 'Keyboard', 'CPU', 'UPS', 'Monitor'));
+fputcsv($output, array('No', 'Employee ID', 'Employee Name', 'Laptop', 'Mouse', 'Headphone', 'Keyboard', 'CPU', 'UPS', 'Monitor', 'Charger'));
 
 // Fetch data from database
 // $sql = "SELECT 
@@ -47,7 +47,7 @@ $sql = "SELECT
     GROUP_CONCAT(CASE WHEN inventory.category = 'CPU' THEN inventory.serial_no END) AS category5,
     GROUP_CONCAT(CASE WHEN inventory.category = 'UPS' THEN inventory.serial_no END) AS category6,
     GROUP_CONCAT(CASE WHEN inventory.category = 'Monitor' THEN inventory.serial_no END) AS category7,
-    GROUP_CONCAT(CASE WHEN inventory.category = 'Charger' THEN inventory.serial_no END) AS category8
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Laptop-Charger' THEN inventory.serial_no END) AS category8
 FROM 
     emplyee 
 RIGHT JOIN 

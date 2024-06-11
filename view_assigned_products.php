@@ -82,7 +82,7 @@ $sql = "SELECT
     GROUP_CONCAT(CASE WHEN inventory.category = 'CPU' THEN inventory.serial_no END) AS category5,
     GROUP_CONCAT(CASE WHEN inventory.category = 'UPS' THEN inventory.serial_no END) AS category6,
     GROUP_CONCAT(CASE WHEN inventory.category = 'Monitor' THEN inventory.serial_no END) AS category7,
-    GROUP_CONCAT(CASE WHEN inventory.category = 'Charger' THEN inventory.serial_no END) AS category8
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Laptop-Charger' THEN inventory.serial_no END) AS category8
 FROM 
     emplyee 
 RIGHT JOIN 

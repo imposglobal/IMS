@@ -44,31 +44,53 @@
                 <th class="text-white">Keyboard</th>
                 <th class="text-white">CPU</th>
                 <th class="text-white">UPS</th>
-                <th class="text-white">Monior</th>     
+                <th class="text-white">Monior</th>
+                <th class="text-white">Charger</th>     
             </tr>
         </thead>
         <tbody>
 <?php
 $i = 1;
+// $sql = "SELECT 
+// emplyee.eid,
+// emplyee.emp_id,
+// emplyee.emp_name,
+// MAX(CASE WHEN inventory.category = 'Laptop' THEN inventory.serial_no END) AS category1,
+// MAX(CASE WHEN inventory.category = 'Mouse' THEN  inventory.serial_no END) AS category2,
+// MAX(CASE WHEN inventory.category = 'Headphones' THEN inventory.serial_no END) AS category3,
+// MAX(CASE WHEN inventory.category = 'Keyboard' THEN inventory.serial_no END) AS category4,
+// MAX(CASE WHEN inventory.category = 'CPU' THEN inventory.serial_no END) AS category5,
+// MAX(CASE WHEN inventory.category = 'UPS' THEN inventory.serial_no END) AS category6,
+// MAX(CASE WHEN inventory.category = 'Monitor' THEN inventory.serial_no END) AS category7
+// FROM 
+// emplyee
+// INNER JOIN 
+// inventory ON emplyee.eid = inventory.eid 
+// GROUP BY 
+// emplyee.eid, emplyee.emp_name
+// ORDER BY 
+// emplyee.eid ASC;";
+
 $sql = "SELECT 
-emplyee.eid,
-emplyee.emp_id,
-emplyee.emp_name,
-MAX(CASE WHEN inventory.category = 'Laptop' THEN inventory.serial_no END) AS category1,
-MAX(CASE WHEN inventory.category = 'Mouse' THEN  inventory.serial_no END) AS category2,
-MAX(CASE WHEN inventory.category = 'Headphones' THEN inventory.serial_no END) AS category3,
-MAX(CASE WHEN inventory.category = 'Keyboard' THEN inventory.serial_no END) AS category4,
-MAX(CASE WHEN inventory.category = 'CPU' THEN inventory.serial_no END) AS category5,
-MAX(CASE WHEN inventory.category = 'UPS' THEN inventory.serial_no END) AS category6,
-MAX(CASE WHEN inventory.category = 'Monitor' THEN inventory.serial_no END) AS category7
+    emplyee.eid,
+    emplyee.emp_id,
+    emplyee.emp_name,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Laptop' THEN inventory.serial_no END) AS category1,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Mouse' THEN inventory.serial_no END) AS category2,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Headphones' THEN inventory.serial_no END) AS category3,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Keyboard' THEN inventory.serial_no END) AS category4,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'CPU' THEN inventory.serial_no END) AS category5,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'UPS' THEN inventory.serial_no END) AS category6,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Monitor' THEN inventory.serial_no END) AS category7,
+    GROUP_CONCAT(CASE WHEN inventory.category = 'Charger' THEN inventory.serial_no END) AS category8
 FROM 
-emplyee
-INNER JOIN 
-inventory ON emplyee.eid = inventory.eid 
+    emplyee 
+RIGHT JOIN 
+    inventory ON emplyee.eid = inventory.eid
+WHERE 
+    emplyee.eid = emplyee.eid
 GROUP BY 
-emplyee.eid, emplyee.emp_name
-ORDER BY 
-emplyee.eid ASC;";
+    emplyee.eid, emplyee.emp_id, emplyee.emp_name;";
 $result = $db->query($sql);
 
 
@@ -88,6 +110,7 @@ if ($result->num_rows > 0) {
             <td><?php echo $row['category5']; ?></td>
             <td><?php echo $row['category6']; ?></td>
             <td><?php echo $row['category7']; ?></td>
+            <td><?php echo $row['category8']; ?></td>
 
         </tr>
         <?php

@@ -1,5 +1,5 @@
 <?php 
-//require('db.php');
+require('db.php');
 
 if(isset($_POST['submit'])){
     $fname = $_POST['fname'];

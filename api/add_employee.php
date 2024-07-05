@@ -14,6 +14,21 @@ if (isset($_POST['submit'])) {
     $date = date("Y-m-d");
     $time = date("H:i:s");
 
+
+$sql = "SELECT * FROM employee ORDER BY emp_id DESC LIMIT 1";
+$result = mysqli_query($db, $sql);
+
+// Check if the query was successful and print the last added record
+if ($result) {
+    if ($row = mysqli_fetch_assoc($result)) {
+        echo $row['eid']; // or any other field you want to display
+    } else {
+        echo "No records found.";
+    }
+} else {
+    echo "Error: " . mysqli_error($db);
+}
+
     $sql = "SELECT * FROM emplyee WHERE emp_id = '$emp_id'";
     $result = mysqli_query($db, $sql);
 

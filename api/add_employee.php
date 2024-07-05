@@ -21,7 +21,8 @@ $result = mysqli_query($db, $sql);
 // Check if the query was successful and print the last added record
 if ($result) {
     if ($row = mysqli_fetch_assoc($result)) {
-        echo $row['eid']; // or any other field you want to display
+        $e_id = $row['eid']; // or any other field you want to display
+        $eid = $e_id + 1;
     } else {
         echo "No records found.";
     }
@@ -36,8 +37,8 @@ if ($result) {
         header("Location: ../add_employee.php?status=duplicate");
     } else {
         echo "hii";
-        $insertEmployeeSql = "INSERT INTO emplyee (emp_name, email, department, emp_id, added_date, added_time, team_name)
-                              VALUES ('$fullname', '$email', '$design', '$emp_id', '$date', '$time', '$team_name')";
+        $insertEmployeeSql = "INSERT INTO emplyee (eid, emp_name, email, department, emp_id, added_date, added_time, team_name)
+                              VALUES ('$eid','$fullname', '$email', '$design', '$emp_id', '$date', '$time', '$team_name')";
         
         $insertCredsSql = "INSERT INTO creds (emp_name, emp_id)
                            VALUES ('$fullname', '$emp_id')";

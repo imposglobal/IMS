@@ -1,6 +1,6 @@
 <?php 
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 require('db.php');
 
 if (isset($_POST['submit'])) {
@@ -36,7 +36,7 @@ if ($result) {
     if ($result && mysqli_num_rows($result) > 0) {
         header("Location: ../add_employee.php?status=duplicate");
     } else {
-        echo "hii";
+        //echo "hii";
         $insertEmployeeSql = "INSERT INTO emplyee (eid, emp_name, email, department, emp_id, added_date, added_time, team_name)
                               VALUES ('$eid','$fullname', '$email', '$design', '$emp_id', '$date', '$time', '$team_name')";
         

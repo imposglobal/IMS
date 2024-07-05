@@ -19,14 +19,14 @@ if (isset($_POST['submit'])) {
         header("Location: ../add_employee.php?status=duplicate");
     } else {
         echo "hii";
-        // $insertEmployeeSql = "INSERT INTO emplyee (emp_name, email, department, emp_id, added_date, added_time, team_name)
-        //                       VALUES ('$fullname', '$email', '$design', '$emp_id', '$date', '$time', '$team_name')";
+        $insertEmployeeSql = "INSERT INTO emplyee (emp_name, email, department, emp_id, added_date, added_time, team_name)
+                              VALUES ('$fullname', '$email', '$design', '$emp_id', '$date', '$time', '$team_name')";
         
-        // $insertCredsSql = "INSERT INTO creds (emp_name, emp_id)
-        //                    VALUES ('$fullname', '$emp_id')";
+        $insertCredsSql = "INSERT INTO creds (emp_name, emp_id)
+                           VALUES ('$fullname', '$emp_id')";
 
-        // $resEmployee = $db->query($insertEmployeeSql);
-        // $resCreds = $db->query($insertCredsSql);
+        $resEmployee = $db->query($insertEmployeeSql);
+        $resCreds = $db->query($insertCredsSql);
 
         // if ($resEmployee === TRUE && $resCreds === TRUE) {
         //     header("Location: ../add_employee.php?status=success");

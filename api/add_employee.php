@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     $time = date("H:i:s");
 
 
-$sql = "SELECT * FROM employee ORDER BY emp_id DESC LIMIT 1";
+$sql = "SELECT * FROM emplyee ORDER BY emp_id DESC LIMIT 1";
 $result = mysqli_query($db, $sql);
 
 // Check if the query was successful and print the last added record

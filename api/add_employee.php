@@ -1,10 +1,10 @@
 <?php 
 require('db.php');
-if(isset($_POST['submit'])){
 
+if (isset($_POST['submit'])) {
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
-    $fullname = $fname." ".$lname;
+    $fullname = $fname . " " . $lname;
     $email = $_POST['email'];
     $design = $_POST['design'];
     $emp_id = $_POST['emp_id'];
@@ -12,52 +12,28 @@ if(isset($_POST['submit'])){
     $date = date("Y-m-d");
     $time = date("H:i:s");
 
-
     $sql = "SELECT * FROM emplyee WHERE emp_id = '$emp_id'";
     $result = mysqli_query($db, $sql);
 
-    if ($result) {
-        $count = mysqli_num_rows($result);
+    if ($result && mysqli_num_rows($result) > 0) {
+        header("Location: ../add_employee.php?status=duplicate");
+    } else {
+        $insertEmployeeSql = "INSERT INTO emplyee (emp_name, email, department, emp_id, added_date, added_time, team_name)
+                              VALUES ('$fullname', '$email', '$design', '$emp_id', '$date', '$time', '$team_name')";
         
-        if ($count >= 1) {
-            header("location: ../add_employee.php?status=duplicate");
-        }else{
+        $insertCredsSql = "INSERT INTO creds (emp_name, emp_id)
+                           VALUES ('$fullname', '$emp_id')";
 
-        // SQL query to insert data
-        $sql = "INSERT INTO emplyee (emp_name, email, department, emp_id , added_date, added_time, team_name)
-        VALUES ('$fullname', '$email', '$design', '$emp_id', '$date', '$time', '$team_name')";
+        $resEmployee = $db->query($insertEmployeeSql);
+        $resCreds = $db->query($insertCredsSql);
 
-
-        if ($db->query($sql) === TRUE) {
-            $res = "true";
+        if ($resEmployee === TRUE && $resCreds === TRUE) {
+            header("Location: ../add_employee.php?status=success");
         } else {
-            $res = "false";
-        }
-        
-         // SQL query to insert data
-        $sql = "INSERT INTO creds (emp_name, emp_id)
-        VALUES ('$fullname','$emp_id')";
-
-        
-        if ($db->query($sql) === TRUE) {
-            $resp = "true";
-        } else {
-            $resp = "false";
-        }
-        
-        if ($res == "true" && $resp == "true") {
-            header("location: ../add_employee.php?status=success");
-        } else {
-            header("location: ../add_employee.php?status=error");
+            header("Location: ../add_employee.php?status=error");
         }
 
- // Close the connection
- $db->close();
-        }
+        $db->close();
     }
-    
-   
-    
-
 }
 ?>

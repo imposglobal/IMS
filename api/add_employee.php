@@ -45,8 +45,8 @@ if ($result) {
 
         $resEmployee = $db->query($insertEmployeeSql);
         //$resCreds = $db->query($insertCredsSql);
-
-        if ($resEmployee === TRUE && $resCreds === TRUE) {
+        // && $resCreds === TRUE
+        if ($resEmployee === TRUE ) {
             header("Location: ../add_employee.php?status=success");
         } else {
             header("Location: ../add_employee.php?status=error");
